@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Shorter of links</title>
+</head>
+<body>
+<h1>Shorter of links</h1>
+<form action="#" th:action="@{/links}" th:object="${shortDto}" method="post">
+    <table>
+        <td>
+            <tr>
+                <td>Full url:</td>
+                <td>
+                    <input type="text" th:field="${shortDto.fullUrl}" style="width: 500px;"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Cut"/>
+                </td>
+            </tr>
+            <tr>
+                <td>Short link:</td>
+                <td><input type="text" th:field="${shortDto.shorter}" readonly />
+                    <a th:href="${shortDto.shorter}">view</a>
+                </td>
+            </tr>
+        </td>
+    </table>
+</form>
+</body>
+</html>
