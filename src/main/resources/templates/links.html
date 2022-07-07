@@ -23,7 +23,7 @@
             <tr>
                 <td>Short link:</td>
                 <td><input type="text" th:field="${shortDto.shorter}" readonly />
-                    <a th:href="${shortDto.shorter}">view</a>
+                    <a href="#" th:href="${shortDto.shorter}" th:text="${shortDto.shorter}">view </a>
                 </td>
             </tr>
         </td>
